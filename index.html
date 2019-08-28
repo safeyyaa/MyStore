@@ -1,27 +1,221 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>My Store</title>
-    <link rel="stylesheet" href="./style.css"></link>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Brand X Store | Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div id="header">
+    <!-- Main Body -->
+    <div class="main-content-wrapper d-flex clearfix">
+      <header class="header-area clearfix">
         <div class="logo">
-            <img alt="logo" src="./assets/logo.png">
+          <a href="index.html"><img src="img/logo.png" alt=""/></a>
         </div>
-        <div class="searchBox">
-            <input placeholder="Please enter the search text" type="text"/>
-        </div>
-        <div class="welcomeBox">
-            <div class="welcomeMessage">
-                <i class="material-icons">person_outline</i>
-                <span>Hello, Safeyya</span>
+        <!-- Site Nav -->
+        <nav class="site-nav">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="product-details.html">Product</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </nav>
+        <!-- Cart Menu -->
+        <div class="cart-search-filter mb-100">
+            <a href="profile.html" class="profile-nav font-bold"
+              > hi, Safeyya</a
+            >
+            <a href="cart.html" class="cart-nav font-bold"
+              ><img src="img/cart.png" alt="" /> Cart <span>(0)</span></a
+            >
+            <a href="#" class="search-nav font-bold" onclick="openSearchBar()"
+              ><img src="img/search.png" alt="" /> Search</a
+            >
+            <div id="searchBar"></div>
+            <a href="#" class="filter-nav font-bold" onclick="openFilterBar()"
+              ><img src="img/filter.png" alt="" /> Filter</a
+              >
+              <div id="filter-menu" class="filter-menu">
+              <div class="filter-brand-dropdown">
+                  <div id="filter-brand" class="filter-brand-dropdown-content">
+                      <label>Brand:</label><br>
+                      <input type="checkbox" name="product-brand"> Tommy Hilfiger<br>
+                      <input type="checkbox" name="product-brand" value="60"> Nike<br>
+                      <input type="checkbox" name="product-brand" value="100"> Adidas<br>
+                  </div>
+                </div>
+                <div class="filter-gender">
+                <div id= "filter-gender" class="filter-gender-content">
+                  <br>
+                    <label>Gender: </label><br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    <input type="radio" name="gender" value="male"> Male
+                </div>
+              </div>
+              <div class="filter-price">
+                  <div id= "filter-price" class="filter-price-content">
+                    <br>
+                    <label>Price:</label><br>
+                    <input type="radio" name="price" value="30"> 0$ - 30$<br>
+                    <input type="radio" name="price" value="60"> 31$ - 60$<br>
+                    <input type="radio" name="price" value="100"> 61$ - 100$<br>  
+                    <input type="radio" name="price" value="150"> 101 $ - 150$<br>
+                    <br>
+              </div>
             </div>
-            <div class="cart">
-                <i class="material-icons">shopping_cart</i>
-                <span>1 Item</span>
+          </div>
+        <!-- Social Button -->
+        <div class="social-info d-flex justify-content-between">
+          <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+      </header>
+      <!-- Product Catagories Area Start -->
+      <div class="products-catagories-area clearfix">
+        <div class="container clearfix">
+          <!-- Single Catagory -->
+          <div class="single-products-catagory clearfix">
+            <a href="shop.html">
+              <img src="img/sh1.jpeg" alt="" />
+              <!-- Hover Content -->
+              <div class="hover-content">
+                <div class="line"></div>
+                <p>$49</p>
+                <h4>Pool Slide</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Single Catagory -->
+          <div class="single-products-catagory clearfix">
+            <a href="shop.html">
+              <img src="img/sh3.jpg" alt="" />
+              <!-- Hover Content -->
+              <div class="hover-content">
+                <div class="line"></div>
+                <p>$180</p>
+                <h4>HRX by Hrithik Roshan</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Single Catagory -->
+          <div class="single-products-catagory clearfix">
+            <a href="shop.html">
+              <img src="img/sh2.jpeg" alt="" />
+              <!-- Hover Content -->
+              <div class="hover-content">
+                <div class="line"></div>
+                <p>$80</p>
+                <h4>MESH LIGHTWEIGHT SNEAKER</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Single Catagory -->
+          <div class="single-products-catagory clearfix">
+            <a href="shop.html">
+              <img src="img/sh4.jpg" alt="" />
+              <!-- Hover Content -->
+              <div class="hover-content">
+                <div class="line"></div>
+                <p>$75</p>
+                <h4>Night Stand</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Single Catagory -->
+          <div class="single-products-catagory clearfix">
+            <a href="shop.html">
+              <img src="img/sh5.jpg" alt="" />
+              <!-- Hover Content -->
+              <div class="hover-content">
+                <div class="line"></div>
+                <p>$75</p>
+                <h4>White Printed Sneakers</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Single Catagory -->
+          <div class="single-products-catagory clearfix">
+            <a href="shop.html">
+              <img src="img/sh7.jpeg" alt="" />
+              <!-- Hover Content -->
+              <div class="hover-content">
+                <div class="line"></div>
+                <p>$129</p>
+                <h4>CONTRAST SNEAKER</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Single Catagory -->
+          <div class="single-products-catagory clearfix">
+            <a href="shop.html">
+              <img src="img/sh6.jpg" alt="" />
+              <!-- Hover Content -->
+              <div class="hover-content">
+                <div class="line"></div>
+                <p>$70</p>
+                <h4>White & Grey Printed Sneakers</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Single Catagory -->
+          <div class="single-products-catagory clearfix">
+            <a href="shop.html">
+              <img src="img/sh8.jpeg" alt="" />
+              <!-- Hover Content -->
+              <div class="hover-content">
+                <div class="line"></div>
+                <p>$69</p>
+                <h4>LOW TOP SNEAKER</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Single Catagory -->
+          <div class="single-products-catagory clearfix">
+            <a href="shop.html">
+              <img src="img/sh9.jpg" alt="" />
+              <!-- Hover Content -->
+              <div class="hover-content">
+                <div class="line"></div>
+                <p>$70</p>
+                <h4>White Printed Sneakers</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer area -->
+      <div class="footer">
+            <div class="footer-items">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logoWhiteBG.png" alt=""/></a>
+                    <p>Copyright@2019 All rights reserved to Digital E1</p>
+                </div>
+                <ul>
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="shop.html">Shop</a></li>
+                  <li><a href="product-details.html">Product</a></li>
+                  <li><a href="cart.html">Cart</a></li>
+                </ul>
             </div>
         </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

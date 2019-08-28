@@ -2,7 +2,7 @@
   "name": "mystore",
   "version": "1.0.0",
   "description": "My First Store",
-  "main": "index.js",
+  "main": "script.js",
   "dependencies": {
     "live-server": "^1.2.1"
   },
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/safeyyaa/MyStore.git"
+    "url": "git+https://github.com/safeyyaa/MyStore1.git"
   },
   "author": "Safeyya Alshehhi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/safeyyaa/MyStore/issues"
+    "url": "https://github.com/safeyyaa/MyStore1/issues"
   },
-  "homepage": "https://github.com/safeyyaa/MyStore#readme"
+  "homepage": "https://github.com/safeyyaa/MyStore1#readme"
 }
