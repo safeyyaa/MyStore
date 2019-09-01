@@ -592,6 +592,7 @@ img {
   position: absolute;
   top: 40px;
   left: 40px;
+  width: 85%;
   font-size: 22px;
   z-index: 10;
 }
@@ -609,6 +610,7 @@ img {
   margin-bottom: 15px;
 }
 .single-products-catagory .hover-content p {
+  display: block;
   font-size: 16px;
   color: #6d6d6d;
   line-height: 1;
@@ -617,20 +619,71 @@ img {
   transition-duration: 250ms;
 }
 .single-products-catagory .hover-content h4 {
+  display: block;
   margin-bottom: 0;
   -webkit-transition-duration: 250ms;
   transition-duration: 250ms;
+}
+.single-products-catagory:hover .hover-content .add-to-cart-button,
+.single-products-catagory:focus .hover-content .add-to-cart-button {
+  opacity: 1;
+  visibility: visible;
+  outline: none;
 }
 .single-products-catagory:hover a::after,
 .single-products-catagory:focus a::after {
   opacity: 1;
   visibility: visible;
 }
+
 .single-products-catagory:hover .hover-content p,
 .single-products-catagory:hover .hover-content h4,
 .single-products-catagory:focus .hover-content p,
 .single-products-catagory:focus .hover-content h4 {
   color: #fff;
+}
+
+.single-products-catagory .hover-content .add-to-cart-button {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  font-family: "helveticaneuemedium";
+  top: 500%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #940956;
+  color: white;
+  font-size: 16px;
+  padding: 10px 40px;
+  border: solid white 1px;
+  border-radius: 8px;
+}
+
+.single-products-catagory .hover-content .add-to-cart-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.single-products-catagory .hover-content .add-to-cart-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.single-products-catagory .hover-content .add-to-cart-button:hover span {
+  padding-right: 20px;
+}
+
+.single-products-catagory .hover-content .add-to-cart-button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 /* Footer CSS*/
