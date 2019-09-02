@@ -15,12 +15,12 @@
     <div class="main-content-wrapper d-flex clearfix">
       <header class="header-area clearfix">
         <div class="logo">
-          <a href="index.html"><img src="img/logo.png" alt=""/></a>
+          <a href="main.html"><img src="img/logo.png" alt=""/></a>
         </div>
         <!-- Site Nav -->
         <nav class="site-nav">
           <ul>
-            <li class="active"><a href="index.html">Home</a></li>
+            <li class="active"><a href="main.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="product-details.html">Product</a></li>
             <li><a href="cart.html">Cart</a></li>
@@ -48,27 +48,36 @@
               <div class="filter-brand-dropdown">
                   <div id="filter-brand" class="filter-brand-dropdown-content">
                       <label>Brand:</label><br>
-                      <input type="checkbox" name="product-brand"> Tommy Hilfiger<br>
-                      <input type="checkbox" name="product-brand" value="60"> Nike<br>
-                      <input type="checkbox" name="product-brand" value="100"> Adidas<br>
+                      <input id= "brandTH" type="checkbox" name="product-brand" onclick="filterByBrand()"> Tommy Hilfiger<br>
+                      <input id= "brandKN" type="checkbox" name="product-brand" onclick="filterByBrand()"> Kook N Keech<br>
+                      <input id= "brandMH" type="checkbox" name="product-brand" onclick="filterByBrand()"> Mast & Harbour<br>
                   </div>
                 </div>
-                <div class="filter-gender">
+                <!-- <div class="filter-gender">
                 <div id= "filter-gender" class="filter-gender-content">
                   <br>
                     <label>Gender: </label><br>
                     <input type="radio" name="gender" value="female"> Female<br>
                     <input type="radio" name="gender" value="male"> Male
                 </div>
+              </div> -->
+              <div id="filter-color" class="filter-brand-dropdown-content">
+                <br>
+                  <label>Color:</label><br>
+                  <input id= "color_white" type="checkbox" name="product-color" onclick="filterByColor()"> White<br>
+                  <input id= "color_blue" type="checkbox" name="product-color" onclick="filterByColor()"> Blue<br>
+                  <input id= "color_black" type="checkbox" name="product-color" onclick="filterByColor()"> Black<br>
               </div>
+
               <div class="filter-price">
                   <div id= "filter-price" class="filter-price-content">
                     <br>
                     <label>Price:</label><br>
-                    <input type="radio" name="price" value="30"> 0$ - 30$<br>
-                    <input type="radio" name="price" value="60"> 31$ - 60$<br>
-                    <input type="radio" name="price" value="100"> 61$ - 100$<br>  
-                    <input type="radio" name="price" value="150"> 101 $ - 150$<br>
+                    <input id = "price_range0" type="radio" name="price_radio" value="none" onclick="filterByPrice()"> None<br>
+                    <input id = "price_range1" type="radio" name="price_radio" value="30" onclick="filterByPrice()"> 0$ - 30$<br>
+                    <input id = "price_range2" type="radio" name="price_radio" value="60" onclick="filterByPrice()"> 31$ - 60$<br>
+                    <input id = "price_range3" type="radio" name="price_radio" value="100" onclick="filterByPrice()"> 61$ - 100$<br>  
+                    <input id = "price_range4" type="radio" name="price_radio" value="150" onclick="filterByPrice()"> 101 $ - 150$<br>
                     <br>
               </div>
             </div>

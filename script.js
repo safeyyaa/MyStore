@@ -1,5 +1,6 @@
 // fetch("/products.json");
 var productsData;
+var filteredData;
 var promise = fetch("./products.json");
 promise
   .then(response => {
@@ -32,7 +33,6 @@ function openSearchBar() {
 function openFilterBar() {
   document.getElementById("filter-menu").style.display = "block";
   document.getElementById("filter-brand").style.display = "block";
-  document.getElementById("filter-gender").style.display = "block";
   document.getElementById("filter-price").style.display = "block";
 }
 
@@ -78,7 +78,7 @@ function ProductsArea(products) {
 
     var productPrice = document.createElement("p");
     productPrice.setAttribute("class", "p");
-    productPrice.innerHTML = product.product_price;
+    productPrice.innerHTML = "$" + product.product_price;
     productHover.appendChild(productPrice);
 
     var productTitle = document.createElement("h4");
@@ -128,4 +128,114 @@ function incrementCartAmount() {
 }
 function counter(counter) {
   return counter + 1;
+}
+
+function filterByBrand() {
+  var isBrandFilter = false;
+  document.getElementById("product-area").innerHTML = "";
+  if (document.getElementById("brandTH").checked == true) {
+    isBrandFilter = true;
+    ProductsArea(
+      productsData.filter(value => {
+        return value.product_brand == "Tommy Hilfiger";
+      })
+    );
+  }
+  if (document.getElementById("brandKN").checked == true) {
+    isBrandFilter = true;
+    ProductsArea(
+      productsData.filter(value => {
+        return value.product_brand == "Kook N Keech";
+      })
+    );
+  }
+  if (document.getElementById("brandMH").checked == true) {
+    isBrandFilter = true;
+    ProductsArea(
+      productsData.filter(value => {
+        return value.product_brand == "Mast & Harbour";
+      })
+    );
+  }
+  if (
+    document.getElementById("brandMH").checked == false &&
+    document.getElementById("brandKN").checked == false &&
+    document.getElementById("brandTH").checked == false
+  ) {
+    ProductsArea(productsData);
+  }
+}
+
+function filterByColor() {
+  document.getElementById("product-area").innerHTML = "";
+  if (document.getElementById("color_white").checked == true) {
+    ProductsArea(
+      productsData.filter(value => {
+        return value.product_color === "white";
+      })
+    );
+  }
+  if (document.getElementById("color_blue").checked == true) {
+    isBrandFilter = true;
+    ProductsArea(
+      productsData.filter(value => {
+        return value.product_color === "blue";
+      })
+    );
+  }
+  if (document.getElementById("color_black").checked == true) {
+    isBrandFilter = true;
+    ProductsArea(
+      productsData.filter(value => {
+        return value.product_color === "black";
+      })
+    );
+  }
+  if (
+    document.getElementById("color_white").checked == false &&
+    document.getElementById("color_blue").checked == false &&
+    document.getElementById("color_black").checked == false
+  ) {
+    ProductsArea(productsData);
+  }
+}
+function filterByPrice() {
+  var price_radio = document.getElementsByName("price_radio");
+  var isBrandFilter = false;
+  document.getElementById("product-area").innerHTML = "";
+  if (document.getElementById("price_range1").checked == true) {
+    isBrandFilter = true;
+    ProductsArea(
+      productsData.filter(value => {
+        return value.product_price > 0 && value.product_price <= 30;
+      })
+    );
+  }
+  if (document.getElementById("price_range2").checked == true) {
+    isBrandFilter = true;
+    ProductsArea(
+      productsData.filter(value => {
+        return value.product_price > 30 && value.product_price <= 60;
+      })
+    );
+  }
+  if (document.getElementById("price_range3").checked == true) {
+    isBrandFilter = true;
+    ProductsArea(
+      productsData.filter(value => {
+        return value.product_price > 60 && value.product_price <= 100;
+      })
+    );
+  }
+  if (document.getElementById("price_range4").checked == true) {
+    isBrandFilter = true;
+    ProductsArea(
+      productsData.filter(value => {
+        return value.product_price > 100 && value.product_price <= 150;
+      })
+    );
+  }
+  if (document.getElementById("price_range0").checked) {
+    ProductsArea(productsData);
+  }
 }
